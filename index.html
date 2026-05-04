@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>OpinionMania</title>
+</head>
+<body>
+  <h1>OpinionMania (Demo)</h1>
+
+  <input id="opinionInput" placeholder="Write your opinion..." />
+  <button onclick="addOpinion()">Post</button>
+
+  <ul id="list"></ul>
+
+<script>
+let opinions = [];
+
+function addOpinion() {
+  const text = document.getElementById('opinionInput').value;
+
+  if (!text) return alert("Write something!");
+
+  const op = {
+    id: Date.now(),
+    text: text,
+    likes: 0
+  };
+
+  opinions.push(op);
+  document.getElementById('opinionInput').value = '';
+  render();
+}
+
+function like(id) {
+  opinions = opinions.map(op => {
+    if (op.id === id) op.likes++;
+    return op;
+  });
+  render();
+}
+
+function render() {
+  const list = document.getElementById('list');
+  list.innerHTML = '';
+
+  opinions.forEach(op => {
+    const li = document.createElement('li');
+    li.innerHTML = `${op.text} (${op.likes}) 
+      <button onclick="like(${op.id})">Like</button>`;
+    list.appendChild(li);
+  });
+}
+</script>
+</body>
+</html>
