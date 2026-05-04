@@ -1,2 +1,36 @@
-# opinionmania
-OpinionMania is a MERN-style full-stack application that allows users to register, log in, post opinions, and like content. It uses JWT authentication, MongoDB for data storage, and a simple frontend for user interaction.
+# 🚀 OpinionMania
+
+OpinionMania is a full-stack web application where users can share their opinions, like posts, and interact with others.
+
+---
+
+## 🧠 Features
+
+- 🔐 User Authentication (Register / Login with JWT)
+- ✍️ Post Opinions
+- 👍 Like System
+- 🗄️ MongoDB Database
+- 🌐 REST API Backend
+
+---
+
+## 🛠️ Tech Stack
+
+- Backend: Node.js, Express
+- Database: MongoDB (Atlas)
+- Auth: JWT (JSON Web Token)
+- Frontend: HTML, JavaScript
+
+---
+
+## 📁 Project Structure
+## 📁 Project Structure
+
+opinionmania/
+│── server.js
+│── index.html
+│── package.json
+│── package-lock.json
+│── .gitignore
+│── README.md
+
